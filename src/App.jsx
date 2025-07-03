@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router';
 import Home from './pages/Home';
 import { useState } from 'react'
-import logo from './assets/logo.png'
+
 import './App.css'
 import './index.css'
 
