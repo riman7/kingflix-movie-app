@@ -1,4 +1,4 @@
-# 🎮 KingFlix – React Movie Explorer
+# KingFlix – React Movie Explorer
 
 A sleek and modern movie browsing application built with **React.js**, **Vite**, and **TMDB API**, featuring:
 
@@ -13,12 +13,12 @@ A sleek and modern movie browsing application built with **React.js**, **Vite**,
 
 ## 🚀 Features
 
-* 🔍 **Search movies** by title
-* 🧑‍🗺️ **Browse categories**: Popular, Top Rated, All
-* 🧾 **View detailed info**: Runtime, rating, release date, etc.
-* 📜 **Infinite scroll** for exploring all movies
-* 🎨 **Clean UI** with dark mode and responsive design
-* 🧹 **Component-based structure** for easy scalability
+-  **Search movies** by title
+-  **Browse categories**: Popular, Top Rated, All
+-  **View detailed info**: Runtime, rating, release date, etc.
+-  **Infinite scroll** for exploring all movies
+-  **Clean UI** with dark mode and responsive design
+-  **Component-based structure** for easy scalability
 
 ---
 
@@ -37,25 +37,29 @@ A sleek and modern movie browsing application built with **React.js**, **Vite**,
 ## 📁 Project Structure
 
 ```
-src/
-│
-├── components/
-│   ├── MovieCard.jsx
-│   ├── Navbar.jsx
-│   ├── Sidebar.jsx
-│   ├── Footer.jsx
-│   ├── Button.jsx
-│
-├── layout/
-│   └── MainLayout.jsx
-│
-├── pages/
-│   ├── Home.jsx
-│   ├── MovieDetails.jsx
-│   └── Search.jsx
-│
-├── App.jsx
-└── main.jsx
+    src/
+    │
+    ├── components/
+    │   ├── movieCard.jsx
+    │   ├── Navbar.jsx
+    │   ├── Sidebar.jsx
+    │   ├── Footer.jsx
+    │   ├── Button.jsx
+    │
+    ├── layout/
+    │   └── MainLayout.jsx
+    │
+    ├── pages/
+    │   ├── Home.jsx
+    │   ├── MovieDetails.jsx
+    │   └── Search.jsx
+    │
+    ├── App.jsx
+    ├── main.jsx
+    ├── index,css
+    └── App.css
+
+    index.html
 ```
 
 ---
@@ -114,12 +118,12 @@ npm run dev
 
 ## 📸 Screenshots
 
-> Add screenshots here showing:
->
-> * Home page
-> * Detail page
-> * Search results
-> * Responsive layout
+### 🏠 Home Page
+![Home Page](./screenshots/home.png)
+
+### 🎥 Movie Details
+![Movie Details](./screenshots/movie-details.png)
+
 
 ---
 
@@ -127,7 +131,7 @@ npm run dev
 
 * **Riman Maharjan**
 * React, Web & API Developer
-* GitHub: [@yourusername](https://github.com/yourusername)
+* GitHub: [@riman7](https://github.com/riman7)
 
 ---
 
@@ -139,4 +143,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## 🌟 Show Your Support
 
-If you like this project, please ⭐ the repo or share it with friends!
+If you like this project, please ⭐ the repo or share it with friends! and feel free to contribute.

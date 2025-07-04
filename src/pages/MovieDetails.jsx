@@ -33,7 +33,7 @@ const MovieDetails = () =>{
         <MainLayout>
         <div className="text-white p-6 flex gap-8">
             <img
-            className="rounded w-64"
+            className="w-64 rounded-2xl"
             src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
             alt={movie.title}
             />
