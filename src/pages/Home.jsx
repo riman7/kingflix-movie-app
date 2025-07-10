@@ -55,8 +55,11 @@ const Home = () =>{
         try{
             const res = await fetch(url, options);
             const data = await res.json();
-            //setAllMovies(data.results);
-            setAllMovies((prev)=> [...prev, ...data.results]);
+            setAllMovies((prev)=> {
+                const existingIds = new Set(prev.map(movie => movie.id));
+                const newMovies = data.results.filter(movie => !existingIds.has(movie.id));
+                return [...prev, ...newMovies];
+            });
             if (data.results.length === 0) {
                 setHasMore(false);
             }
@@ -72,13 +75,13 @@ const Home = () =>{
         }, [page]);
 
     return(
-        <MainLayout>
+        <MainLayout >
             <h2 className="text-white text-4xl mt-4 ">Popular</h2>
             <div className="mt-4 flex overflow-x-auto gap-4 scroll-container">
                 {
                     popular.map((movie) => {
                                 return ( 
-                                    <MovieCard movie={movie} />
+                                    <MovieCard movie={movie} key={`popular-${movie.id}`} />
                                 );
                         })
                 }
@@ -88,7 +91,7 @@ const Home = () =>{
                 {
                     topRated.map((movie) => {
                                 return ( 
-                                    <MovieCard movie={movie} />
+                                    <MovieCard movie={movie} key={`toprated-${movie.id}`} />
                                 );
                         })
                 }
@@ -106,10 +109,10 @@ const Home = () =>{
                 }
             >
                 <div className="mt-4 flex flex-wrap justify-center gap-4">
-                {allMovies.map((movie) => (
-                    
-                    <MovieCard movie={movie} key={movie.id} />
-                ))}
+                    {allMovies.map((movie) => (
+                        
+                        <MovieCard movie={movie} key={`all-${movie.id}`} />
+                    ))}
                 </div>
             </InfiniteScroll>
         </MainLayout>

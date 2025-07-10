@@ -127,10 +127,9 @@ npm run dev
 
 ---
 
-## 🧑‍💻 Author
+## 🧑‍💻 Designer
 
 * **Riman Maharjan**
-* React, Web & API Developer
 * GitHub: [@riman7](https://github.com/riman7)
 
 ---

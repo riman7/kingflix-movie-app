@@ -4,7 +4,7 @@ const MovieCard = ({movie}) =>{
     return(
         <div className=" bg-[#1b1d2b]
                         border-1 border-[#525252] rounded-xl z-100
-                        flex-none w-48 px-2 pt-2 pb-4 
+                        flex-none w-[48vw] md:w-[15.5%] px-2 pt-2 pb-4 
                         cursor-pointer
                         ransition duration-300 ease-in-out
                         hover:shadow-[0_8px_20px_rgba(255,255,255,0.1)]"
