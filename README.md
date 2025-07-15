@@ -115,12 +115,15 @@ npm run dev
 
 ---
 
-## 💡 Customization Ideas
+## 💡 Future Updates
 
-* Add **watchlist** and **favorites** using `localStorage`
-* Support for **TV shows** or **genres**
-* User authentication with Firebase or Supabase
+* Use Node.js for backend for working **watchlist**, **watched** **favorites**
+* Working login System
+* Suggestation while typing in Search
+* Seperate section for **genres**
 * Theme toggler (light/dark mode)
+* Better Landing Page with 3d animation
+
 
 ---
 
@@ -135,11 +138,13 @@ npm run dev
 
 ---
 
-## 🧑‍💻 Designer
+## Designer
 
 * **Riman Maharjan**
 * GitHub: [@riman7](https://github.com/riman7)
-
+* Twitter: [@RimanMaharjan7](https://x.com/RimanMaharjan7)
+* LinkedIn: [Riman Maharjan](https://www.linkedin.com/in/rimanmaharjan7/)
+* Email: rimanmaharjan7@gmail.com
 ---
 
 ## 📜 License
