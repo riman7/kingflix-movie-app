@@ -44,6 +44,7 @@ A sleek and modern movie browsing application built with **React.js**, **Vite**,
     │   ├── Navbar.jsx
     │   ├── Sidebar.jsx
     │   ├── Footer.jsx
+    │   ├── skeletion.jsx
     │   ├── Button.jsx
     │
     ├── layout/
@@ -52,6 +53,13 @@ A sleek and modern movie browsing application built with **React.js**, **Vite**,
     ├── pages/
     │   ├── Home.jsx
     │   ├── MovieDetails.jsx
+    │   ├── Login.jsx
+    │   ├── Notification.jsx
+    │   ├── Recommended.jsx
+    │   ├── Remainder.jsx
+    │   ├── Upcomings.jsx
+    │   ├── Watched.jsx
+    │   ├── Watchlist.jsx
     │   └── Search.jsx
     │
     ├── App.jsx

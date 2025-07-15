@@ -1,7 +1,10 @@
+import Skeleton from 'react-loading-skeleton';
+import 'react-loading-skeleton/dist/skeleton.css';
 import { useNavigate } from "react-router"
 const MovieCard = ({movie}) =>{
     const navigate = useNavigate()
     return(
+
         <div className=" bg-[#1b1d2b]
                         border-1 border-[#525252] rounded-xl z-100
                         flex-none w-[48vw] md:w-[15.5%] px-2 pt-2 pb-4 
@@ -23,6 +26,6 @@ const MovieCard = ({movie}) =>{
                 <p className="text-yellow-400 font-bold">⭐ {Math.round(movie.vote_average * 10) / 10}/10</p>
             </div>
         </div>
-    )
+        )
 }
 export default MovieCard

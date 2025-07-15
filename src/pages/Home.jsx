@@ -1,8 +1,8 @@
 import { useEffect, useState} from "react";
 import MovieCard from "../components/movieCard"
-import Search from "./Search";
 import MainLayout from "../layout/MainLayout";
 import InfiniteScroll from "react-infinite-scroll-component";
+import Skeletion from "../components/skeletion";
 
 const Home = () =>{
     const [popular, setPopular] = useState([]);
@@ -11,6 +11,8 @@ const Home = () =>{
     const [allMovies, setAllMovies] = useState([]);
     const [hasMore, setHasMore] = useState(true);
     const [page, setPage] = useState(1);
+    const [popularLoading, setPopularLoading] = useState(true);
+    const [topRatedLoading, setTopRatedLoading] = useState(true);
 
     useEffect(()=>{
         const fetchMovies = async () =>{
@@ -32,11 +34,12 @@ const Home = () =>{
                 const res1 = await fetch(url1, options);
                 const data1 = await res1.json();
                 setPopular(data1.results);
-                console.log(data1.results)
+                setPopularLoading(false);
 
                 const res2 = await fetch(url2, options);
                 const data2 = await res2.json();
                 setTopRated(data2.results);
+                setTopRatedLoading(false);
             }
             catch(err){
                 console.error("Failed to fetch movies:", err);
@@ -60,6 +63,7 @@ const Home = () =>{
                 const newMovies = data.results.filter(movie => !existingIds.has(movie.id));
                 return [...prev, ...newMovies];
             });
+            
             if (data.results.length === 0) {
                 setHasMore(false);
             }
@@ -76,11 +80,13 @@ const Home = () =>{
 
     return(
         <MainLayout >
+            
             <h2 className="text-white text-4xl mt-4 ">Popular</h2>
             <div className="mt-4 flex overflow-x-auto gap-4 scroll-container">
                 {
                     popular.map((movie) => {
                                 return ( 
+                                    popularLoading ? <Skeletion /> :
                                     <MovieCard movie={movie} key={`popular-${movie.id}`} />
                                 );
                         })
@@ -91,6 +97,7 @@ const Home = () =>{
                 {
                     topRated.map((movie) => {
                                 return ( 
+                                    topRatedLoading ? <Skeletion /> :
                                     <MovieCard movie={movie} key={`toprated-${movie.id}`} />
                                 );
                         })
@@ -110,7 +117,6 @@ const Home = () =>{
             >
                 <div className="mt-4 flex flex-wrap justify-center gap-4">
                     {allMovies.map((movie) => (
-                        
                         <MovieCard movie={movie} key={`all-${movie.id}`} />
                     ))}
                 </div>
